@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import io.netty.buffer.ByteBuf;
 
@@ -13,11 +13,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
-import enhancedportals.block.BlockFrame;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.portal.GlyphElement;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.block.BlockFrame;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.portal.GlyphElement;
+import mercuryrifts.utility.GeneralUtils;
 
 public class TileRedstoneInterface extends TileFrame
 {

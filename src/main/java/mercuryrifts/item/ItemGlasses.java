@@ -1,11 +1,11 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import enhancedportals.EnhancedPortals;
+import mercuryrifts.mercuryrifts;
 
 public class ItemGlasses extends ItemArmor
 {
@@ -15,16 +15,16 @@ public class ItemGlasses extends ItemArmor
 
     public ItemGlasses(String n)
     {
-        super(ArmorMaterial.CLOTH, EnhancedPortals.proxy.gogglesRenderIndex, 0);
+        super(ArmorMaterial.CLOTH, mercuryrifts.proxy.gogglesRenderIndex, 0);
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
     }
 
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        return "enhancedportals:textures/models/armor/goggles.png";
+        return "mercuryrifts:textures/models/armor/goggles.png";
     }
 
     @Override
@@ -42,6 +42,6 @@ public class ItemGlasses extends ItemArmor
     @Override
     public void registerIcons(IIconRegister iconRegister)
     {
-        icon = iconRegister.registerIcon("enhancedportals:goggles");
+        icon = iconRegister.registerIcon("mercuryrifts:goggles");
     }
 }

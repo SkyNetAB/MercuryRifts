@@ -1,4 +1,4 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -18,9 +18,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.tileentity.TileController;
-import enhancedportals.utility.WorldCoordinates;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.tileentity.TileController;
+import mercuryrifts.utility.WorldCoordinates;
 
 public class NetworkManager
 {
@@ -50,8 +50,8 @@ public class NetworkManager
         portalNetworks = new HashMap<String, String>();
         networkedPortals = new HashMap<String, ArrayList<String>>();
         server = event.getServer();
-        portalFile = new File(EnhancedPortals.proxy.getWorldDir(), "EP3_PortalLocations.json");
-        networkFile = new File(EnhancedPortals.proxy.getWorldDir(), "EP3_PortalNetworks.json");
+        portalFile = new File(mercuryrifts.proxy.getWorldDir(), "mr_PortalLocations.json");
+        networkFile = new File(mercuryrifts.proxy.getWorldDir(), "mr_PortalNetworks.json");
 
         try
         {
@@ -59,7 +59,7 @@ public class NetworkManager
         }
         catch (Exception e)
         {
-            EnhancedPortals.logger.catching(e);
+            mercuryrifts.logger.catching(e);
             e.printStackTrace();
         }
     }
@@ -364,7 +364,7 @@ public class NetworkManager
         }
         catch (Exception e)
         {
-            EnhancedPortals.logger.catching(e);
+            mercuryrifts.logger.catching(e);
         }
     }
 }

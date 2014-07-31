@@ -1,4 +1,4 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

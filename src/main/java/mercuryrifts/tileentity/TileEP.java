@@ -1,9 +1,9 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
-import enhancedportals.utility.WorldCoordinates;
+import mercuryrifts.utility.WorldCoordinates;
 
 public class TileEP extends TileEntity
 {

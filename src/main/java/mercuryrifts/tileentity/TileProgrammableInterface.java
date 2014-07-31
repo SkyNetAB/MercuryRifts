@@ -1,12 +1,12 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.utility.GeneralUtils;
 
 public class TileProgrammableInterface extends TileFrame
 {
@@ -29,7 +29,7 @@ public class TileProgrammableInterface extends TileFrame
 
             if (controller != null && controller.isFinalized())
             {
-                player.openGui(EnhancedPortals.instance, GuiHandler.PROGRAMMABLE_INTERFACE, worldObj, xCoord, yCoord, zCoord);
+                player.openGui(mercuryrifts.instance, GuiHandler.PROGRAMMABLE_INTERFACE, worldObj, xCoord, yCoord, zCoord);
                 return true;
             }
         }
@@ -88,7 +88,7 @@ public class TileProgrammableInterface extends TileFrame
         /*
          * scriptBindings.remove("Entity");
          * 
-         * if (e != null) { scriptBindings.put("Entity", new enhancedportals.script.Entity(e)); }
+         * if (e != null) { scriptBindings.put("Entity", new mercuryrifts.script.Entity(e)); }
          * 
          * scriptBindings.put("World", new World(worldObj)); scriptBindings.put("Portal", new Portal(getPortalController()));
          */
@@ -129,14 +129,14 @@ public class TileProgrammableInterface extends TileFrame
         /*
          * scriptData = compound.getString("script");
          * 
-         * if (scriptData != null && scriptData.length() > 0) { try { updateScript(scriptData); } catch (ScriptException e) { EnhancedPortals.logger.warn("Unable to load saved script for Programmable Interface at " + xCoord + "," + yCoord + "," + zCoord); EnhancedPortals.logger.catching(e); } }
+         * if (scriptData != null && scriptData.length() > 0) { try { updateScript(scriptData); } catch (ScriptException e) { mercuryrifts.logger.warn("Unable to load saved script for Programmable Interface at " + xCoord + "," + yCoord + "," + zCoord); mercuryrifts.logger.catching(e); } }
          */
     }
 
     public void scriptError(Exception e, String func)
     {
-        EnhancedPortals.logger.warn("Error parsing function: " + func);
-        EnhancedPortals.logger.catching(e);
+        mercuryrifts.logger.warn("Error parsing function: " + func);
+        mercuryrifts.logger.catching(e);
     }
 
     public void updateScript(String s) //throws ScriptException

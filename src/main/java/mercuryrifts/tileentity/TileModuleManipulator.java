@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import java.util.ArrayList;
 import net.minecraft.entity.Entity;
@@ -7,11 +7,11 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import enhancedportals.client.PortalParticleFX;
-import enhancedportals.common.IPortalModule;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.client.PortalParticleFX;
+import mercuryrifts.common.IPortalModule;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.utility.GeneralUtils;
 
 public class TileModuleManipulator extends TileFrame implements IInventory
 {
@@ -125,7 +125,7 @@ public class TileModuleManipulator extends TileFrame implements IInventory
     @Override
     public String getInventoryName()
     {
-        return "tile.ep3.portalFrame.upgrade.name";
+        return "tile.mr.portalFrame.upgrade.name";
     }
 
     @Override

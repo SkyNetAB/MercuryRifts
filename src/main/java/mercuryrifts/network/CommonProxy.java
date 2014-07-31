@@ -1,4 +1,4 @@
-package enhancedportals.network;
+package mercuryrifts.network;
 
 import java.io.File;
 
@@ -9,44 +9,44 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockDecorBorderedQuartz;
-import enhancedportals.block.BlockDecorEnderInfusedMetal;
-import enhancedportals.block.BlockFrame;
-import enhancedportals.block.BlockPortal;
-import enhancedportals.block.BlockStabilizer;
-import enhancedportals.block.BlockStabilizerEmpty;
-import enhancedportals.crafting.Vanilla;
-import enhancedportals.item.ItemBlankPortalModule;
-import enhancedportals.item.ItemBlankUpgrade;
-import enhancedportals.item.ItemFrame;
-import enhancedportals.item.ItemGlasses;
-import enhancedportals.item.ItemLocationCard;
-import enhancedportals.item.ItemManual;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.item.ItemPortalModule;
-import enhancedportals.item.ItemStabilizer;
-import enhancedportals.item.ItemUpgrade;
-import enhancedportals.item.ItemWrench;
-import enhancedportals.network.packet.PacketGui;
-import enhancedportals.network.packet.PacketGuiData;
-import enhancedportals.network.packet.PacketRequestGui;
-import enhancedportals.network.packet.PacketRerender;
-import enhancedportals.network.packet.PacketTextureData;
-import enhancedportals.portal.NetworkManager;
-import enhancedportals.tileentity.TileController;
-import enhancedportals.tileentity.TileDiallingDevice;
-import enhancedportals.tileentity.TileFrameBasic;
-import enhancedportals.tileentity.TileModuleManipulator;
-import enhancedportals.tileentity.TileNetworkInterface;
-import enhancedportals.tileentity.TilePortal;
-import enhancedportals.tileentity.TileProgrammableInterface;
-import enhancedportals.tileentity.TileRedstoneInterface;
-import enhancedportals.tileentity.TileStabilizer;
-import enhancedportals.tileentity.TileStabilizerMain;
-import enhancedportals.tileentity.TileTransferEnergy;
-import enhancedportals.tileentity.TileTransferFluid;
-import enhancedportals.tileentity.TileTransferItem;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockDecorBorderedQuartz;
+import mercuryrifts.block.BlockDecorEnderInfusedMetal;
+import mercuryrifts.block.BlockFrame;
+import mercuryrifts.block.BlockPortal;
+import mercuryrifts.block.BlockStabilizer;
+import mercuryrifts.block.BlockStabilizerEmpty;
+import mercuryrifts.crafting.Vanilla;
+import mercuryrifts.item.ItemBlankPortalModule;
+import mercuryrifts.item.ItemBlankUpgrade;
+import mercuryrifts.item.ItemFrame;
+import mercuryrifts.item.ItemGlasses;
+import mercuryrifts.item.ItemLocationCard;
+import mercuryrifts.item.ItemManual;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.item.ItemPortalModule;
+import mercuryrifts.item.ItemStabilizer;
+import mercuryrifts.item.ItemUpgrade;
+import mercuryrifts.item.ItemWrench;
+import mercuryrifts.network.packet.PacketGui;
+import mercuryrifts.network.packet.PacketGuiData;
+import mercuryrifts.network.packet.PacketRequestGui;
+import mercuryrifts.network.packet.PacketRerender;
+import mercuryrifts.network.packet.PacketTextureData;
+import mercuryrifts.portal.NetworkManager;
+import mercuryrifts.tileentity.TileController;
+import mercuryrifts.tileentity.TileDiallingDevice;
+import mercuryrifts.tileentity.TileFrameBasic;
+import mercuryrifts.tileentity.TileModuleManipulator;
+import mercuryrifts.tileentity.TileNetworkInterface;
+import mercuryrifts.tileentity.TilePortal;
+import mercuryrifts.tileentity.TileProgrammableInterface;
+import mercuryrifts.tileentity.TileRedstoneInterface;
+import mercuryrifts.tileentity.TileStabilizer;
+import mercuryrifts.tileentity.TileStabilizerMain;
+import mercuryrifts.tileentity.TileTransferEnergy;
+import mercuryrifts.tileentity.TileTransferFluid;
+import mercuryrifts.tileentity.TileTransferItem;
 
 public class CommonProxy
 {
@@ -104,11 +104,11 @@ public class CommonProxy
 
     public void registerPackets()
     {
-        EnhancedPortals.packetPipeline.registerPacket(PacketRequestGui.class);
-        EnhancedPortals.packetPipeline.registerPacket(PacketTextureData.class);
-        EnhancedPortals.packetPipeline.registerPacket(PacketRerender.class);
-        EnhancedPortals.packetPipeline.registerPacket(PacketGuiData.class);
-        EnhancedPortals.packetPipeline.registerPacket(PacketGui.class);
+        mercuryrifts.packetPipeline.registerPacket(PacketRequestGui.class);
+        mercuryrifts.packetPipeline.registerPacket(PacketTextureData.class);
+        mercuryrifts.packetPipeline.registerPacket(PacketRerender.class);
+        mercuryrifts.packetPipeline.registerPacket(PacketGuiData.class);
+        mercuryrifts.packetPipeline.registerPacket(PacketGui.class);
     }
 
     public void registerTileEntities()

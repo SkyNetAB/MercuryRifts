@@ -1,4 +1,4 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -9,7 +9,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import buildcraft.api.tools.IToolWrench;
 import cofh.api.block.IDismantleable;
-import enhancedportals.EnhancedPortals;
+import mercuryrifts.mercuryrifts;
 
 public class ItemWrench extends Item implements IToolWrench
 {
@@ -21,7 +21,7 @@ public class ItemWrench extends Item implements IToolWrench
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
         setMaxStackSize(1);
     }
@@ -67,7 +67,7 @@ public class ItemWrench extends Item implements IToolWrench
     @Override
     public void registerIcons(IIconRegister register)
     {
-        texture = register.registerIcon("enhancedportals:wrench");
+        texture = register.registerIcon("mercuryrifts:wrench");
     }
 
     @Override

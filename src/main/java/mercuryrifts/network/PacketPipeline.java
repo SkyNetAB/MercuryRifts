@@ -1,4 +1,4 @@
-package enhancedportals.network;
+package mercuryrifts.network;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -25,9 +25,9 @@ import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.network.packet.PacketEP;
-import enhancedportals.tileentity.TileEP;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.network.packet.PacketEP;
+import mercuryrifts.tileentity.TileEP;
 
 @ChannelHandler.Sharable
 public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, PacketEP>
@@ -101,7 +101,7 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Packet
     // Method to call from FMLInitializationEvent
     public void initalise()
     {
-        channels = NetworkRegistry.INSTANCE.newChannel("EP3", this);
+        channels = NetworkRegistry.INSTANCE.newChannel("mr", this);
     }
 
     // Method to call from FMLPostInitializationEvent
@@ -143,19 +143,19 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Packet
     {
         if (packets.size() > 256)
         {
-            EnhancedPortals.logger.warn("!!! You've registered too many packets...");
+            mercuryrifts.logger.warn("!!! You've registered too many packets...");
             return false;
         }
 
         if (packets.contains(clazz))
         {
-            EnhancedPortals.logger.warn("!!! You've already registered this packet...");
+            mercuryrifts.logger.warn("!!! You've already registered this packet...");
             return false;
         }
 
         if (isPostInitialised)
         {
-            EnhancedPortals.logger.warn("!!! You're registering your packet too late...");
+            mercuryrifts.logger.warn("!!! You're registering your packet too late...");
             return false;
         }
 

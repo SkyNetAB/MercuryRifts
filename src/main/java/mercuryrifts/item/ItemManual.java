@@ -1,4 +1,4 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.network.ClientProxy;
-import enhancedportals.network.GuiHandler;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.network.ClientProxy;
+import mercuryrifts.network.GuiHandler;
 
 public class ItemManual extends Item
 {
@@ -19,7 +19,7 @@ public class ItemManual extends Item
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
         setMaxStackSize(1);
     }
@@ -33,7 +33,7 @@ public class ItemManual extends Item
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
     {
-        player.openGui(EnhancedPortals.instance, GuiHandler.MANUAL, world, 0, 0, 0);
+        player.openGui(mercuryrifts.instance, GuiHandler.MANUAL, world, 0, 0, 0);
         return super.onItemRightClick(stack, world, player);
     }
 
@@ -42,7 +42,7 @@ public class ItemManual extends Item
     {
         if (world.isRemote && player.isSneaking() && ClientProxy.setManualPageFromBlock(world.getBlock(x, y, z), world.getBlockMetadata(x, y, z)))
         {
-            player.openGui(EnhancedPortals.instance, GuiHandler.MANUAL, world, 0, 0, 0);
+            player.openGui(mercuryrifts.instance, GuiHandler.MANUAL, world, 0, 0, 0);
             return true;
         }
 
@@ -52,6 +52,6 @@ public class ItemManual extends Item
     @Override
     public void registerIcons(IIconRegister iconRegister)
     {
-        texture = iconRegister.registerIcon("enhancedportals:manual");
+        texture = iconRegister.registerIcon("mercuryrifts:manual");
     }
 }

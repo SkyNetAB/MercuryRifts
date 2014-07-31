@@ -1,4 +1,4 @@
-package enhancedportals.network;
+package mercuryrifts.network;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -17,24 +17,24 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.DimensionManager;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockDecorBorderedQuartz;
-import enhancedportals.block.BlockDecorEnderInfusedMetal;
-import enhancedportals.block.BlockFrame;
-import enhancedportals.block.BlockPortal;
-import enhancedportals.block.BlockStabilizer;
-import enhancedportals.block.BlockStabilizerEmpty;
-import enhancedportals.client.PortalRenderer;
-import enhancedportals.item.ItemBlankPortalModule;
-import enhancedportals.item.ItemBlankUpgrade;
-import enhancedportals.item.ItemGlasses;
-import enhancedportals.item.ItemLocationCard;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.item.ItemPortalModule;
-import enhancedportals.item.ItemUpgrade;
-import enhancedportals.item.ItemWrench;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalTextureManager;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockDecorBorderedQuartz;
+import mercuryrifts.block.BlockDecorEnderInfusedMetal;
+import mercuryrifts.block.BlockFrame;
+import mercuryrifts.block.BlockPortal;
+import mercuryrifts.block.BlockStabilizer;
+import mercuryrifts.block.BlockStabilizerEmpty;
+import mercuryrifts.client.PortalRenderer;
+import mercuryrifts.item.ItemBlankPortalModule;
+import mercuryrifts.item.ItemBlankUpgrade;
+import mercuryrifts.item.ItemGlasses;
+import mercuryrifts.item.ItemLocationCard;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.item.ItemPortalModule;
+import mercuryrifts.item.ItemUpgrade;
+import mercuryrifts.item.ItemWrench;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalTextureManager;
 
 public class ClientProxy extends CommonProxy
 {
@@ -83,7 +83,7 @@ public class ClientProxy extends CommonProxy
 
     public static boolean manualEntryHasPage(int page)
     {
-        return !EnhancedPortals.localize("manual." + manualEntry + ".page." + page).contains(".page.");
+        return !mercuryrifts.localize("manual." + manualEntry + ".page." + page).contains(".page.");
     }
 
     public static boolean resourceExists(String file)
@@ -92,7 +92,7 @@ public class ClientProxy extends CommonProxy
 
         try
         {
-            resourceManager.getResource(new ResourceLocation("enhancedportals", file));
+            resourceManager.getResource(new ResourceLocation("mercuryrifts", file));
             return true;
         }
         catch (Exception e)

@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import io.netty.buffer.ByteBuf;
 
@@ -31,15 +31,15 @@ import cofh.api.energy.IEnergyContainerItem;
 import cofh.api.energy.IEnergyHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockStabilizer;
-import enhancedportals.item.ItemLocationCard;
-import enhancedportals.network.CommonProxy;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalException;
-import enhancedportals.portal.PortalTextureManager;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockStabilizer;
+import mercuryrifts.item.ItemLocationCard;
+import mercuryrifts.network.CommonProxy;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalException;
+import mercuryrifts.portal.PortalTextureManager;
+import mercuryrifts.utility.GeneralUtils;
 
 public class TileStabilizerMain extends TileEP implements IInventory, IEnergyHandler, IPowerReceptor
 {
@@ -470,8 +470,8 @@ public class TileStabilizerMain extends TileEP implements IInventory, IEnergyHan
 
         for (Entry<String, String> pair : activeConnections.entrySet())
         {
-            TileController controllerA = EnhancedPortals.proxy.networkManager.getPortalController(new GlyphIdentifier(pair.getKey()));
-            TileController controllerB = EnhancedPortals.proxy.networkManager.getPortalController(new GlyphIdentifier(pair.getValue()));
+            TileController controllerA = mercuryrifts.proxy.networkManager.getPortalController(new GlyphIdentifier(pair.getKey()));
+            TileController controllerB = mercuryrifts.proxy.networkManager.getPortalController(new GlyphIdentifier(pair.getValue()));
 
             if (controllerA != null)
             {
@@ -518,16 +518,16 @@ public class TileStabilizerMain extends TileEP implements IInventory, IEnergyHan
         {
             throw new PortalException("cannotDialDiallingPortal");
         }
-        else if (!EnhancedPortals.proxy.networkManager.portalIdentifierExists(portalA))
+        else if (!mercuryrifts.proxy.networkManager.portalIdentifierExists(portalA))
         {
             throw new PortalException("noPortalWithThatIdentifierSending");
         }
-        else if (!EnhancedPortals.proxy.networkManager.portalIdentifierExists(portalB))
+        else if (!mercuryrifts.proxy.networkManager.portalIdentifierExists(portalB))
         {
             throw new PortalException("noPortalWithThatIdentifierReceiving");
         }
 
-        TileController cA = EnhancedPortals.proxy.networkManager.getPortalController(portalA), cB = EnhancedPortals.proxy.networkManager.getPortalController(portalB);
+        TileController cA = mercuryrifts.proxy.networkManager.getPortalController(portalA), cB = mercuryrifts.proxy.networkManager.getPortalController(portalB);
 
         if (cA == null)
         {
@@ -657,7 +657,7 @@ public class TileStabilizerMain extends TileEP implements IInventory, IEnergyHan
             throw new PortalException("No identifier found for second portal");
         }
 
-        TileController cA = EnhancedPortals.proxy.networkManager.getPortalController(portalA), cB = EnhancedPortals.proxy.networkManager.getPortalController(portalB);
+        TileController cA = mercuryrifts.proxy.networkManager.getPortalController(portalA), cB = mercuryrifts.proxy.networkManager.getPortalController(portalB);
 
         if (cA == null || cB == null)
         {
@@ -741,7 +741,7 @@ public class TileStabilizerMain extends TileEP implements IInventory, IEnergyHan
                     }
                     catch (PortalException e)
                     {
-                        EnhancedPortals.logger.warn(e.getMessage());
+                        mercuryrifts.logger.warn(e.getMessage());
                     }
                 }
 

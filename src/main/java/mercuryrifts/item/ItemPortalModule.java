@@ -1,4 +1,4 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import java.util.List;
 
@@ -14,11 +14,11 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.PortalParticleFX;
-import enhancedportals.common.IPortalModule;
-import enhancedportals.network.ClientProxy;
-import enhancedportals.tileentity.TileModuleManipulator;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.PortalParticleFX;
+import mercuryrifts.common.IPortalModule;
+import mercuryrifts.network.ClientProxy;
+import mercuryrifts.tileentity.TileModuleManipulator;
 
 public class ItemPortalModule extends Item implements IPortalModule
 {
@@ -42,7 +42,7 @@ public class ItemPortalModule extends Item implements IPortalModule
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
         setMaxDamage(0);
         setMaxStackSize(64);
@@ -65,7 +65,7 @@ public class ItemPortalModule extends Item implements IPortalModule
                 i = t.getInteger("facing");
             }
 
-            list.add(EnumChatFormatting.GRAY + EnhancedPortals.localize("gui.facing." + i));
+            list.add(EnumChatFormatting.GRAY + mercuryrifts.localize("gui.facing." + i));
         }
 
         list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal(getUnlocalizedNameInefficiently(stack) + ".desc"));
@@ -109,7 +109,7 @@ public class ItemPortalModule extends Item implements IPortalModule
     @Override
     public String getID(ItemStack upgrade)
     {
-        return EnhancedPortals.SHORT_ID + "." + upgrade.getItemDamage();
+        return mercuryrifts.SHORT_ID + "." + upgrade.getItemDamage();
     }
 
     @Override
@@ -255,11 +255,11 @@ public class ItemPortalModule extends Item implements IPortalModule
     @Override
     public void registerIcons(IIconRegister register)
     {
-        baseIcon = register.registerIcon("enhancedportals:blank_portal_module");
+        baseIcon = register.registerIcon("mercuryrifts:blank_portal_module");
 
         for (int i = 0; i < overlayIcons.length; i++)
         {
-            overlayIcons[i] = register.registerIcon("enhancedportals:portal_module_" + i);
+            overlayIcons[i] = register.registerIcon("mercuryrifts:portal_module_" + i);
         }
     }
 

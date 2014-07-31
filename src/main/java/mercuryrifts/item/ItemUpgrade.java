@@ -1,4 +1,4 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import java.util.List;
 
@@ -11,19 +11,19 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockFrame;
-import enhancedportals.tileentity.TileController;
-import enhancedportals.tileentity.TileDiallingDevice;
-import enhancedportals.tileentity.TileFrame;
-import enhancedportals.tileentity.TileModuleManipulator;
-import enhancedportals.tileentity.TileNetworkInterface;
-import enhancedportals.tileentity.TilePortalPart;
-import enhancedportals.tileentity.TileProgrammableInterface;
-import enhancedportals.tileentity.TileRedstoneInterface;
-import enhancedportals.tileentity.TileTransferEnergy;
-import enhancedportals.tileentity.TileTransferFluid;
-import enhancedportals.tileentity.TileTransferItem;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockFrame;
+import mercuryrifts.tileentity.TileController;
+import mercuryrifts.tileentity.TileDiallingDevice;
+import mercuryrifts.tileentity.TileFrame;
+import mercuryrifts.tileentity.TileModuleManipulator;
+import mercuryrifts.tileentity.TileNetworkInterface;
+import mercuryrifts.tileentity.TilePortalPart;
+import mercuryrifts.tileentity.TileProgrammableInterface;
+import mercuryrifts.tileentity.TileRedstoneInterface;
+import mercuryrifts.tileentity.TileTransferEnergy;
+import mercuryrifts.tileentity.TileTransferFluid;
+import mercuryrifts.tileentity.TileTransferItem;
 
 public class ItemUpgrade extends Item
 {
@@ -36,7 +36,7 @@ public class ItemUpgrade extends Item
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
         setHasSubtypes(true);
         setMaxDamage(0);
@@ -109,22 +109,22 @@ public class ItemUpgrade extends Item
             {
                 if (controller.getProgrammableInterface() != null && blockMeta == BlockFrame.PROGRAMMABLE_INTERFACE)
                 {
-                    player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeError("multipleProgram")));
+                    player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeError("multipleProgram")));
                     return false;
                 }
                 else if (controller.getDiallingDevices().size() > 0 && blockMeta == BlockFrame.NETWORK_INTERFACE)
                 {
-                    player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeError("dialAndNetwork")));
+                    player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeError("dialAndNetwork")));
                     return false;
                 }
                 else if (controller.getNetworkInterfaces().size() > 0 && blockMeta == BlockFrame.DIALLING_DEVICE)
                 {
-                    player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeError("dialAndNetwork")));
+                    player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeError("dialAndNetwork")));
                     return false;
                 }
                 else if (controller.getModuleManipulator() != null && blockMeta == BlockFrame.MODULE_MANIPULATOR)
                 {
-                    player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeError("multipleMod")));
+                    player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeError("multipleMod")));
                     return false;
                 }
 
@@ -179,11 +179,11 @@ public class ItemUpgrade extends Item
     @Override
     public void registerIcons(IIconRegister register)
     {
-        baseIcon = register.registerIcon("enhancedportals:blank_upgrade");
+        baseIcon = register.registerIcon("mercuryrifts:blank_upgrade");
 
         for (int i = 0; i < overlayIcons.length; i++)
         {
-            overlayIcons[i] = register.registerIcon("enhancedportals:upgrade_" + i);
+            overlayIcons[i] = register.registerIcon("mercuryrifts:upgrade_" + i);
         }
     }
 

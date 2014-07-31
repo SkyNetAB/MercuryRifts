@@ -1,9 +1,9 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
-import enhancedportals.EnhancedPortals;
+import mercuryrifts.mercuryrifts;
 
 public class ItemBlankUpgrade extends Item
 {
@@ -14,7 +14,7 @@ public class ItemBlankUpgrade extends Item
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
     }
 
@@ -27,6 +27,6 @@ public class ItemBlankUpgrade extends Item
     @Override
     public void registerIcons(IIconRegister ir)
     {
-        texture = ir.registerIcon("enhancedportals:blank_upgrade");
+        texture = ir.registerIcon("mercuryrifts:blank_upgrade");
     }
 }

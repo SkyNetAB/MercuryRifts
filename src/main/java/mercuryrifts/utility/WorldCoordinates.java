@@ -1,4 +1,4 @@
-package enhancedportals.utility;
+package mercuryrifts.utility;
 
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;

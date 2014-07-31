@@ -1,6 +1,6 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
-import enhancedportals.EnhancedPortals;
+import mercuryrifts.mercuryrifts;
 
 public class PortalException extends Exception
 {
@@ -8,11 +8,11 @@ public class PortalException extends Exception
 
     public PortalException(String message)
     {
-        super(EnhancedPortals.localizeError(message));
+        super(mercuryrifts.localizeError(message));
     }
 
     public PortalException(String message, boolean localize)
     {
-        super(localize ? EnhancedPortals.localizeError(message) : message);
+        super(localize ? mercuryrifts.localizeError(message) : message);
     }
 }

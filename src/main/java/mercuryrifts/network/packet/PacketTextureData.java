@@ -1,4 +1,4 @@
-package enhancedportals.network.packet;
+package mercuryrifts.network.packet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -7,14 +7,14 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.ByteBufUtils;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.GuiDiallingDeviceEdit;
-import enhancedportals.network.ClientProxy;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.portal.GlyphElement;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalTextureManager;
-import enhancedportals.tileentity.TileDiallingDevice;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.GuiDiallingDeviceEdit;
+import mercuryrifts.network.ClientProxy;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.portal.GlyphElement;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalTextureManager;
+import mercuryrifts.tileentity.TileDiallingDevice;
 
 public class PacketTextureData extends PacketEP
 {

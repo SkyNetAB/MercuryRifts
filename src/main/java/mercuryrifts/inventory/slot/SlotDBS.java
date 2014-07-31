@@ -1,11 +1,11 @@
-package enhancedportals.inventory.slot;
+package mercuryrifts.inventory.slot;
 
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import enhancedportals.common.IPortalModule;
-import enhancedportals.item.ItemLocationCard;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.common.IPortalModule;
+import mercuryrifts.item.ItemLocationCard;
+import mercuryrifts.utility.GeneralUtils;
 
 public class SlotDBS extends Slot
 {

@@ -1,4 +1,4 @@
-package enhancedportals.network.packet;
+package mercuryrifts.network.packet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -6,7 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.nbt.NBTTagCompound;
 import cpw.mods.fml.common.network.ByteBufUtils;
-import enhancedportals.inventory.BaseContainer;
+import mercuryrifts.inventory.BaseContainer;
 
 public class PacketGuiData extends PacketEP
 {

@@ -1,11 +1,11 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import cpw.mods.fml.common.network.ByteBufUtils;
-import enhancedportals.tileentity.TileController;
+import mercuryrifts.tileentity.TileController;
 
 public class PortalTextureManager
 {

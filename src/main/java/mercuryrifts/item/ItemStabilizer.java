@@ -1,4 +1,4 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockStabilizer;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockStabilizer;
 
 public class ItemStabilizer extends ItemBlock
 {
@@ -24,8 +24,8 @@ public class ItemStabilizer extends ItemBlock
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
     {
-        list.add(EnhancedPortals.localize("block.multiblockStructure"));
-        list.add(EnumChatFormatting.DARK_GRAY + EnhancedPortals.localize("block.dbsSize"));
+        list.add(mercuryrifts.localize("block.multiblockStructure"));
+        list.add(EnumChatFormatting.DARK_GRAY + mercuryrifts.localize("block.dbsSize"));
     }
 
     @Override

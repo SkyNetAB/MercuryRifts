@@ -1,4 +1,4 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,12 +24,12 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.BlockFluidBase;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockPortal;
-import enhancedportals.item.ItemPortalModule;
-import enhancedportals.network.CommonProxy;
-import enhancedportals.tileentity.TileController;
-import enhancedportals.tileentity.TileModuleManipulator;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockPortal;
+import mercuryrifts.item.ItemPortalModule;
+import mercuryrifts.network.CommonProxy;
+import mercuryrifts.tileentity.TileController;
+import mercuryrifts.tileentity.TileModuleManipulator;
 
 public class EntityManager
 {
@@ -72,7 +72,7 @@ public class EntityManager
 
         if (module != null)
         {
-            ItemStack s = module.getModule(EnhancedPortals.SHORT_ID + "." + ItemPortalModule.PortalModules.FACING.ordinal());
+            ItemStack s = module.getModule(mercuryrifts.SHORT_ID + "." + ItemPortalModule.PortalModules.FACING.ordinal());
 
             if (s != null)
             {

@@ -1,10 +1,10 @@
-package enhancedportals.network.packet;
+package mercuryrifts.network.packet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import enhancedportals.tileentity.TileEP;
+import mercuryrifts.tileentity.TileEP;
 
 public class PacketGui extends PacketEP
 {

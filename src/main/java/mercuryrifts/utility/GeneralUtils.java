@@ -1,4 +1,4 @@
-package enhancedportals.utility;
+package mercuryrifts.utility;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import buildcraft.api.tools.IToolWrench;
 import cofh.api.energy.IEnergyContainerItem;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
-import enhancedportals.item.ItemGlasses;
-import enhancedportals.network.CommonProxy;
+import mercuryrifts.item.ItemGlasses;
+import mercuryrifts.network.CommonProxy;
 
 public class GeneralUtils
 {

@@ -1,7 +1,7 @@
-package enhancedportals.utility;
+package mercuryrifts.utility;
 
 import li.cil.oc.api.network.Arguments;
-import enhancedportals.portal.GlyphIdentifier;
+import mercuryrifts.portal.GlyphIdentifier;
 
 public class ComputerUtils
 {

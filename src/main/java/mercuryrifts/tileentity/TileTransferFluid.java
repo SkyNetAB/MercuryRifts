@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import io.netty.buffer.ByteBuf;
 
@@ -27,12 +27,12 @@ import cpw.mods.fml.common.Optional.Method;
 import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.utility.GeneralUtils;
 
-@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = EnhancedPortals.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = EnhancedPortals.MODID_OPENCOMPUTERS) })
+@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = mercuryrifts.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = mercuryrifts.MODID_OPENCOMPUTERS) })
 public class TileTransferFluid extends TileFrameTransfer implements IFluidHandler, IPeripheral, SimpleComponent
 {
     public FluidTank tank = new FluidTank(FluidContainerRegistry.BUCKET_VOLUME * 16);
@@ -73,14 +73,14 @@ public class TileTransferFluid extends TileFrameTransfer implements IFluidHandle
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void attach(IComputerAccess computer)
     {
 
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public Object[] callMethod(IComputerAccess computer, ILuaContext context, int method, Object[] arguments) throws Exception
     {
         if (method == 0)
@@ -120,7 +120,7 @@ public class TileTransferFluid extends TileFrameTransfer implements IFluidHandle
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void detach(IComputerAccess computer)
     {
 
@@ -144,7 +144,7 @@ public class TileTransferFluid extends TileFrameTransfer implements IFluidHandle
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public boolean equals(IPeripheral other)
     {
         return other == this;
@@ -157,14 +157,14 @@ public class TileTransferFluid extends TileFrameTransfer implements IFluidHandle
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public String getComponentName()
     {
         return "ep_transfer_fluid";
     }
 
     @Callback(direct = true, limit = 1)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getFluid(Context context, Arguments args)
     {
         final HashMap<String, Object> map = new HashMap<String, Object>();
@@ -196,7 +196,7 @@ public class TileTransferFluid extends TileFrameTransfer implements IFluidHandle
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String[] getMethodNames()
     {
         return new String[] { "getFluidStored", "getAmountStored", "isFull", "isEmpty", "isSending" };
@@ -209,14 +209,14 @@ public class TileTransferFluid extends TileFrameTransfer implements IFluidHandle
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String getType()
     {
         return "ep_transfer_fluid";
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] isSending(Context context, Arguments args)
     {
         return new Object[] { isSending };

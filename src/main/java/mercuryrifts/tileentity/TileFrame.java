@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -6,11 +6,11 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.util.IIcon;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
-import enhancedportals.block.BlockFrame;
-import enhancedportals.common.ISidedBlockTexture;
-import enhancedportals.network.ClientProxy;
-import enhancedportals.network.CommonProxy;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.block.BlockFrame;
+import mercuryrifts.common.ISidedBlockTexture;
+import mercuryrifts.network.ClientProxy;
+import mercuryrifts.network.CommonProxy;
+import mercuryrifts.utility.GeneralUtils;
 
 public abstract class TileFrame extends TilePortalPart implements ISidedBlockTexture
 {

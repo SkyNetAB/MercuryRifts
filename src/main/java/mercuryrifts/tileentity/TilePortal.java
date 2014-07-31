@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -7,11 +7,11 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
-import enhancedportals.block.BlockPortal;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.network.ClientProxy;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.block.BlockPortal;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.network.ClientProxy;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.utility.GeneralUtils;
 
 public class TilePortal extends TilePortalPart
 {

@@ -1,4 +1,4 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.utility.WorldCoordinates;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.utility.WorldCoordinates;
 
 public class ItemLocationCard extends Item
 {
@@ -54,7 +54,7 @@ public class ItemLocationCard extends Item
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
         setMaxDamage(0);
         setHasSubtypes(true);
@@ -93,6 +93,6 @@ public class ItemLocationCard extends Item
     @Override
     public void registerIcons(IIconRegister register)
     {
-        texture = register.registerIcon("enhancedportals:location_card");
+        texture = register.registerIcon("mercuryrifts:location_card");
     }
 }

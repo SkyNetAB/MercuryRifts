@@ -1,11 +1,11 @@
-package enhancedportals.network.packet;
+package mercuryrifts.network.packet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.tileentity.TileEP;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.tileentity.TileEP;
 
 public class PacketRequestGui extends PacketEP
 {
@@ -56,7 +56,7 @@ public class PacketRequestGui extends PacketEP
 
         if (t != null)
         {
-            player.openGui(EnhancedPortals.instance, g, t.getWorldObj(), x, y, z);
+            player.openGui(mercuryrifts.instance, g, t.getWorldObj(), x, y, z);
         }
     }
 }

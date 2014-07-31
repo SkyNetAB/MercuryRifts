@@ -1,6 +1,6 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.utility.GeneralUtils;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,4 +1,4 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
 public class GlyphElement
 {

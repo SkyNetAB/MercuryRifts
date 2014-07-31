@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import net.minecraft.nbt.NBTTagCompound;
 

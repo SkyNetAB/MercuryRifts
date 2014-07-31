@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import li.cil.oc.api.network.Arguments;
 import li.cil.oc.api.network.Callback;
@@ -14,12 +14,12 @@ import cpw.mods.fml.common.Optional.Method;
 import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.utility.GeneralUtils;
 
-@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = EnhancedPortals.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = EnhancedPortals.MODID_OPENCOMPUTERS) })
+@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = mercuryrifts.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = mercuryrifts.MODID_OPENCOMPUTERS) })
 public class TileNetworkInterface extends TileFrame implements IPeripheral, SimpleComponent
 {
     @Override
@@ -40,7 +40,7 @@ public class TileNetworkInterface extends TileFrame implements IPeripheral, Simp
                 {
                     if (!worldObj.isRemote)
                     {
-                        player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeError("noUidSet")));
+                        player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeError("noUidSet")));
                     }
                 }
                 else
@@ -65,14 +65,14 @@ public class TileNetworkInterface extends TileFrame implements IPeripheral, Simp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void attach(IComputerAccess computer)
     {
 
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public Object[] callMethod(IComputerAccess computer, ILuaContext context, int method, Object[] arguments) throws Exception
     {
         if (method == 0) // dial
@@ -94,14 +94,14 @@ public class TileNetworkInterface extends TileFrame implements IPeripheral, Simp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void detach(IComputerAccess computer)
     {
 
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] dial(Context context, Arguments args)
     {
         getPortalController().connectionDial();
@@ -109,28 +109,28 @@ public class TileNetworkInterface extends TileFrame implements IPeripheral, Simp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public boolean equals(IPeripheral other)
     {
         return other == this;
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public String getComponentName()
     {
         return "ep_interface_network";
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String[] getMethodNames()
     {
         return new String[] { "dial", "terminate" };
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String getType()
     {
         return "ep_interface_network";
@@ -143,7 +143,7 @@ public class TileNetworkInterface extends TileFrame implements IPeripheral, Simp
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] terminate(Context context, Arguments args)
     {
         getPortalController().connectionTerminate();

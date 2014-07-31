@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -26,23 +26,23 @@ import cpw.mods.fml.relauncher.SideOnly;
 import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockPortal;
-import enhancedportals.item.ItemLocationCard;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.network.CommonProxy;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.network.packet.PacketRerender;
-import enhancedportals.portal.EntityManager;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalException;
-import enhancedportals.portal.PortalTextureManager;
-import enhancedportals.portal.PortalUtils;
-import enhancedportals.utility.ComputerUtils;
-import enhancedportals.utility.GeneralUtils;
-import enhancedportals.utility.WorldCoordinates;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockPortal;
+import mercuryrifts.item.ItemLocationCard;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.network.CommonProxy;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.network.packet.PacketRerender;
+import mercuryrifts.portal.EntityManager;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalException;
+import mercuryrifts.portal.PortalTextureManager;
+import mercuryrifts.portal.PortalUtils;
+import mercuryrifts.utility.ComputerUtils;
+import mercuryrifts.utility.GeneralUtils;
+import mercuryrifts.utility.WorldCoordinates;
 
-@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = EnhancedPortals.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = EnhancedPortals.MODID_OPENCOMPUTERS) })
+@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = mercuryrifts.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = mercuryrifts.MODID_OPENCOMPUTERS) })
 public class TileController extends TileFrame implements IPeripheral, SimpleComponent
 {
     enum ControlState
@@ -98,7 +98,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
                         boolean reconfiguring = dimensionalBridgeStabilizer != null;
                         setDBS(player, stack);
                         configurePortal();
-                        player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeSuccess(!reconfiguring ? "create" : "reconfigure")));
+                        player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeSuccess(!reconfiguring ? "create" : "reconfigure")));
                     }
 
                     return true;
@@ -108,7 +108,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
                     if (GeneralUtils.isWrench(stack) && !worldObj.isRemote)
                     {
                         configurePortal();
-                        player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeSuccess("reconfigure")));
+                        player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeSuccess("reconfigure")));
                     }
 
                     return true;
@@ -193,7 +193,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void attach(IComputerAccess computer)
     {
 
@@ -229,7 +229,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public Object[] callMethod(IComputerAccess computer, ILuaContext context, int method, Object[] arguments) throws Exception
     {
         if (method == 0) // isPortalActive
@@ -458,7 +458,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
                 throw new PortalException("stabilizerNotFound");
             }
 
-            dbs.setupNewConnection(getIdentifierUnique(), EnhancedPortals.proxy.networkManager.getDestination(getIdentifierUnique(), getIdentifierNetwork()), null);
+            dbs.setupNewConnection(getIdentifierUnique(), mercuryrifts.proxy.networkManager.getDestination(getIdentifierUnique(), getIdentifierNetwork()), null);
         }
         catch (PortalException e)
         {
@@ -529,7 +529,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
         }
         catch (PortalException e)
         {
-            EnhancedPortals.logger.catching(e);
+            mercuryrifts.logger.catching(e);
         }
 
         temporaryDBS = null;
@@ -657,21 +657,21 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void detach(IComputerAccess computer)
     {
 
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public boolean equals(IPeripheral other)
     {
         return other == this;
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public String getComponentName()
     {
         return "ep_controller";
@@ -779,7 +779,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getFrameColour(Context context, Arguments args) throws Exception
     {
         return new Object[] { activeTextureData.getFrameColour() };
@@ -816,7 +816,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
             return nID;
         }
 
-        return EnhancedPortals.proxy.networkManager.getPortalNetwork(getIdentifierUnique());
+        return mercuryrifts.proxy.networkManager.getPortalNetwork(getIdentifierUnique());
     }
 
     /**
@@ -829,11 +829,11 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
             return uID;
         }
 
-        return EnhancedPortals.proxy.networkManager.getPortalIdentifier(getWorldCoordinates());
+        return mercuryrifts.proxy.networkManager.getPortalIdentifier(getWorldCoordinates());
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String[] getMethodNames()
     {
         return new String[] { "isPortalActive", "getUniqueIdentifier", "setUniqueIdentifier", "getFrameColour", "setFrameColour", "getPortalColour", "setPortalColour", "getParticleColour", "setParticleColour" };
@@ -860,14 +860,14 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getParticleColour(Context context, Arguments args) throws Exception
     {
         return new Object[] { activeTextureData.getParticleColour() };
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getPortalColour(Context context, Arguments args) throws Exception
     {
         return new Object[] { activeTextureData.getPortalColour() };
@@ -920,14 +920,14 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String getType()
     {
         return "ep_controller";
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getUniqueIdentifier(Context context, Arguments args) throws Exception
     {
         return comp_GetUniqueIdentifier();
@@ -947,7 +947,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] isPortalActive(Context context, Arguments args)
     {
         return new Object[] { isPortalActive() };
@@ -1207,7 +1207,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
             {
                 if (!chunks.contains(new ChunkCoordIntPair(c.posX >> 4, c.posZ >> 4)))
                 {
-                    EnhancedPortals.packetPipeline.sendToAllAround(new PacketRerender(c.posX, c.posY, c.posZ), this);
+                    mercuryrifts.packetPipeline.sendToAllAround(new PacketRerender(c.posX, c.posY, c.posZ), this);
                     chunks.add(new ChunkCoordIntPair(c.posX >> 4, c.posZ >> 4));
                 }
             }
@@ -1257,7 +1257,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] setFrameColour(Context context, Arguments args) throws Exception
     {
         return comp_SetFrameColour(ComputerUtils.argsToArray(args));
@@ -1293,12 +1293,12 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
 
         if (getHasIdentifierNetwork())
         {
-            EnhancedPortals.proxy.networkManager.removePortalFromNetwork(uID, getIdentifierNetwork());
+            mercuryrifts.proxy.networkManager.removePortalFromNetwork(uID, getIdentifierNetwork());
         }
 
         if (id.size() > 0)
         {
-            EnhancedPortals.proxy.networkManager.addPortalToNetwork(uID, id);
+            mercuryrifts.proxy.networkManager.addPortalToNetwork(uID, id);
         }
 
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
@@ -1306,7 +1306,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
 
     public void setIdentifierUnique(GlyphIdentifier id) throws PortalException
     {
-        if (EnhancedPortals.proxy.networkManager.getPortalLocation(id) != null) // Check to see if we already have a portal with this ID
+        if (mercuryrifts.proxy.networkManager.getPortalLocation(id) != null) // Check to see if we already have a portal with this ID
         {
             if (getHasIdentifierUnique() && getIdentifierUnique().equals(id)) // Make sure it's not already us
             {
@@ -1328,24 +1328,24 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
             if (getHasIdentifierNetwork()) // Check to see if it's in a network
             {
                 networkIdentifier = getIdentifierNetwork();
-                EnhancedPortals.proxy.networkManager.removePortalFromNetwork(getIdentifierUnique(), networkIdentifier); // Remove it if it is
+                mercuryrifts.proxy.networkManager.removePortalFromNetwork(getIdentifierUnique(), networkIdentifier); // Remove it if it is
             }
 
-            EnhancedPortals.proxy.networkManager.removePortal(getWorldCoordinates()); // Remove the old identifier
+            mercuryrifts.proxy.networkManager.removePortal(getWorldCoordinates()); // Remove the old identifier
 
             if (id.size() > 0) // If the new identifier isn't blank
             {
-                EnhancedPortals.proxy.networkManager.addPortal(id, getWorldCoordinates()); // Add it
+                mercuryrifts.proxy.networkManager.addPortal(id, getWorldCoordinates()); // Add it
 
                 if (networkIdentifier != null)
                 {
-                    EnhancedPortals.proxy.networkManager.addPortalToNetwork(id, networkIdentifier); // Re-add it to the network, if it was in one
+                    mercuryrifts.proxy.networkManager.addPortalToNetwork(id, networkIdentifier); // Re-add it to the network, if it was in one
                 }
             }
         }
         else if (id.size() > 0) // Otherwise if the new identifier isn't blank
         {
-            EnhancedPortals.proxy.networkManager.addPortal(id, getWorldCoordinates()); // Add the portal
+            mercuryrifts.proxy.networkManager.addPortal(id, getWorldCoordinates()); // Add the portal
         }
 
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
@@ -1384,7 +1384,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] setParticleColour(Context context, Arguments args) throws Exception
     {
         return comp_SetParticleColour(ComputerUtils.argsToArray(args));
@@ -1405,7 +1405,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] setPortalColour(Context context, Arguments args) throws Exception
     {
         return comp_SetPortalColour(ComputerUtils.argsToArray(args));
@@ -1444,7 +1444,7 @@ public class TileController extends TileFrame implements IPeripheral, SimpleComp
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] setUniqueIdentifier(Context context, Arguments args) throws Exception
     {
         return comp_SetUniqueIdentifier(ComputerUtils.argsToArray(args));

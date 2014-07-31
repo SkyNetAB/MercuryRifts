@@ -1,11 +1,11 @@
-package enhancedportals.item;
+package mercuryrifts.item;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import enhancedportals.EnhancedPortals;
+import mercuryrifts.mercuryrifts;
 
 public class ItemNanobrush extends Item
 {
@@ -17,7 +17,7 @@ public class ItemNanobrush extends Item
     {
         super();
         instance = this;
-        setCreativeTab(EnhancedPortals.creativeTab);
+        setCreativeTab(mercuryrifts.creativeTab);
         setUnlocalizedName(n);
         setMaxStackSize(1);
     }
@@ -37,6 +37,6 @@ public class ItemNanobrush extends Item
     @Override
     public void registerIcons(IIconRegister register)
     {
-        texture = register.registerIcon("enhancedportals:paintbrush");
+        texture = register.registerIcon("mercuryrifts:paintbrush");
     }
 }

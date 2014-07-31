@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import io.netty.buffer.ByteBuf;
 
@@ -20,14 +20,14 @@ import cpw.mods.fml.common.network.ByteBufUtils;
 import dan200.computercraft.api.lua.ILuaContext;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.portal.GlyphElement;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalTextureManager;
-import enhancedportals.utility.ComputerUtils;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.portal.GlyphElement;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalTextureManager;
+import mercuryrifts.utility.ComputerUtils;
 
-@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = EnhancedPortals.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = EnhancedPortals.MODID_OPENCOMPUTERS) })
+@InterfaceList(value = { @Interface(iface = "dan200.computercraft.api.peripheral.IPeripheral", modid = mercuryrifts.MODID_COMPUTERCRAFT), @Interface(iface = "li.cil.oc.api.network.SimpleComponent", modid = mercuryrifts.MODID_OPENCOMPUTERS) })
 public class TileDiallingDevice extends TileFrame implements IPeripheral, SimpleComponent
 {
     public ArrayList<GlyphElement> glyphList = new ArrayList<GlyphElement>();
@@ -46,7 +46,7 @@ public class TileDiallingDevice extends TileFrame implements IPeripheral, Simple
         {
             if (controller.getIdentifierUnique() == null)
             {
-                player.addChatComponentMessage(new ChatComponentText(EnhancedPortals.localizeError("noUidSet")));
+                player.addChatComponentMessage(new ChatComponentText(mercuryrifts.localizeError("noUidSet")));
             }
             else
             {
@@ -80,14 +80,14 @@ public class TileDiallingDevice extends TileFrame implements IPeripheral, Simple
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void attach(IComputerAccess computer)
     {
 
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public Object[] callMethod(IComputerAccess computer, ILuaContext context, int method, Object[] arguments) throws Exception
     {
         if (method == 0) // dial
@@ -184,14 +184,14 @@ public class TileDiallingDevice extends TileFrame implements IPeripheral, Simple
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public void detach(IComputerAccess computer)
     {
 
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] dial(Context context, Arguments args) throws Exception
     {
         if (args.count() < 1)
@@ -203,28 +203,28 @@ public class TileDiallingDevice extends TileFrame implements IPeripheral, Simple
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] dialStored(Context context, Arguments args) throws Exception
     {
         return comp_DialStored(ComputerUtils.argsToArray(args));
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public boolean equals(IPeripheral other)
     {
         return other == this;
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public String getComponentName()
     {
         return "ep_dialling_device";
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String[] getMethodNames()
     {
         return new String[] { "dial", "terminate", "dialStored", "getStoredName", "getStoredGlyph", "getStoredCount" };
@@ -260,28 +260,28 @@ public class TileDiallingDevice extends TileFrame implements IPeripheral, Simple
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getStoredCount(Context context, Arguments args)
     {
         return new Object[] { glyphList.size() };
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getStoredGlyph(Context context, Arguments args) throws Exception
     {
         return comp_GetStoredGlyph(ComputerUtils.argsToArray(args));
     }
 
     @Callback(direct = true)
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] getStoredName(Context context, Arguments args) throws Exception
     {
         return comp_GetStoredName(ComputerUtils.argsToArray(args));
     }
 
     @Override
-    @Method(modid = EnhancedPortals.MODID_COMPUTERCRAFT)
+    @Method(modid = mercuryrifts.MODID_COMPUTERCRAFT)
     public String getType()
     {
         return "ep_dialling_device";
@@ -343,7 +343,7 @@ public class TileDiallingDevice extends TileFrame implements IPeripheral, Simple
     }
 
     @Callback
-    @Method(modid = EnhancedPortals.MODID_OPENCOMPUTERS)
+    @Method(modid = mercuryrifts.MODID_OPENCOMPUTERS)
     public Object[] terminate(Context context, Arguments args)
     {
         getPortalController().connectionTerminate();

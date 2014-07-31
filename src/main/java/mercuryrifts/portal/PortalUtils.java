@@ -1,4 +1,4 @@
-package enhancedportals.portal;
+package mercuryrifts.portal;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -10,13 +10,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-import enhancedportals.tileentity.TileController;
-import enhancedportals.tileentity.TileDiallingDevice;
-import enhancedportals.tileentity.TileModuleManipulator;
-import enhancedportals.tileentity.TileNetworkInterface;
-import enhancedportals.tileentity.TilePortalPart;
-import enhancedportals.tileentity.TileProgrammableInterface;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.tileentity.TileController;
+import mercuryrifts.tileentity.TileDiallingDevice;
+import mercuryrifts.tileentity.TileModuleManipulator;
+import mercuryrifts.tileentity.TileNetworkInterface;
+import mercuryrifts.tileentity.TilePortalPart;
+import mercuryrifts.tileentity.TileProgrammableInterface;
+import mercuryrifts.utility.GeneralUtils;
 
 public class PortalUtils
 {

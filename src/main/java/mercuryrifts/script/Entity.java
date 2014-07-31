@@ -1,4 +1,4 @@
-package enhancedportals.script;
+package mercuryrifts.script;
 
 public class Entity
 {

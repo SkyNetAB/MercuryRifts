@@ -1,4 +1,4 @@
-package enhancedportals.tileentity;
+package mercuryrifts.tileentity;
 
 import java.util.ArrayList;
 
@@ -18,10 +18,10 @@ import buildcraft.api.power.PowerHandler.Type;
 import cofh.api.energy.IEnergyHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import enhancedportals.block.BlockStabilizer;
-import enhancedportals.network.CommonProxy;
-import enhancedportals.utility.GeneralUtils;
-import enhancedportals.utility.WorldCoordinates;
+import mercuryrifts.block.BlockStabilizer;
+import mercuryrifts.network.CommonProxy;
+import mercuryrifts.utility.GeneralUtils;
+import mercuryrifts.utility.WorldCoordinates;
 
 public class TileStabilizer extends TileEP implements IEnergyHandler, IPowerReceptor
 {
