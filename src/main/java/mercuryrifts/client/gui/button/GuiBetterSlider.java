@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.button;
+package mercuryrifts.client.gui.button;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
