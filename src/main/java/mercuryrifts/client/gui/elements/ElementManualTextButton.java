@@ -1,10 +1,10 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.GuiManual;
-import enhancedportals.network.ClientProxy;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.GuiManual;
+import mercuryrifts.network.ClientProxy;
 
 public class ElementManualTextButton extends BaseElement
 {
@@ -20,7 +20,7 @@ public class ElementManualTextButton extends BaseElement
 
         if (entry != null)
         {
-            displayStr = EnhancedPortals.localize("manual." + entry + ".title");
+            displayStr = mercuryrifts.localize("manual." + entry + ".title");
 
             if (displayStr.length() > length)
             {
@@ -44,7 +44,7 @@ public class ElementManualTextButton extends BaseElement
 
         if (entry != null)
         {
-            displayStr = EnhancedPortals.localize("manual." + entry + ".title");
+            displayStr = mercuryrifts.localize("manual." + entry + ".title");
 
             if (displayStr.length() > length)
             {
@@ -66,7 +66,7 @@ public class ElementManualTextButton extends BaseElement
     {
         if (tooLong)
         {
-            list.add(EnhancedPortals.localize("manual." + entry + ".title"));
+            list.add(mercuryrifts.localize("manual." + entry + ".title"));
         }
     }
 

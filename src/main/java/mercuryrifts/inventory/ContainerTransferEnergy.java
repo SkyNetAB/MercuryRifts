@@ -1,12 +1,12 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiTransferEnergy;
-import enhancedportals.tileentity.TileTransferEnergy;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiTransferEnergy;
+import mercuryrifts.tileentity.TileTransferEnergy;
 
 public class ContainerTransferEnergy extends BaseContainer
 {

@@ -1,12 +1,12 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiModuleManipulator;
-import enhancedportals.inventory.slot.SlotPortalModule;
-import enhancedportals.tileentity.TileModuleManipulator;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiModuleManipulator;
+import mercuryrifts.inventory.slot.SlotPortalModule;
+import mercuryrifts.tileentity.TileModuleManipulator;
 
 public class ContainerModuleManipulator extends BaseContainer
 {

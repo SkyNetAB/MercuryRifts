@@ -1,16 +1,16 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiNetworkInterface;
-import enhancedportals.network.packet.PacketGuiData;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.tileentity.TileController;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiNetworkInterface;
+import mercuryrifts.network.packet.PacketGuiData;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.tileentity.TileController;
 
 public class ContainerNetworkInterface extends BaseContainer
 {
@@ -30,7 +30,7 @@ public class ContainerNetworkInterface extends BaseContainer
     {
         super.detectAndSendChanges();
 
-        int cPortals = controller.getHasIdentifierNetwork() ? EnhancedPortals.proxy.networkManager.getNetworkSize(controller.getIdentifierNetwork()) : -1;
+        int cPortals = controller.getHasIdentifierNetwork() ? mercuryrifts.proxy.networkManager.getNetworkSize(controller.getIdentifierNetwork()) : -1;
         String glyphs = controller.getIdentifierNetwork() == null ? "" : controller.getIdentifierNetwork().getGlyphString();
 
         for (int i = 0; i < crafters.size(); i++)
@@ -46,7 +46,7 @@ public class ContainerNetworkInterface extends BaseContainer
             {
                 NBTTagCompound t = new NBTTagCompound();
                 t.setString("nid", glyphs);
-                EnhancedPortals.packetPipeline.sendTo(new PacketGuiData(t), (EntityPlayerMP) icrafting);
+                mercuryrifts.packetPipeline.sendTo(new PacketGuiData(t), (EntityPlayerMP) icrafting);
             }
         }
 

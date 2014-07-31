@@ -1,4 +1,4 @@
-package enhancedportals.common;
+package mercuryrifts.common;
 
 import net.minecraft.util.IIcon;
 

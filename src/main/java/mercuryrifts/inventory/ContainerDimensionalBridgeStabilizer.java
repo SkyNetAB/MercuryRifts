@@ -1,17 +1,17 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiDimensionalBridgeStabilizer;
-import enhancedportals.inventory.slot.SlotDBS;
-import enhancedportals.network.packet.PacketGuiData;
-import enhancedportals.tileentity.TileStabilizerMain;
-import enhancedportals.utility.GeneralUtils;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiDimensionalBridgeStabilizer;
+import mercuryrifts.inventory.slot.SlotDBS;
+import mercuryrifts.network.packet.PacketGuiData;
+import mercuryrifts.tileentity.TileStabilizerMain;
+import mercuryrifts.utility.GeneralUtils;
 
 public class ContainerDimensionalBridgeStabilizer extends BaseContainer
 {
@@ -42,7 +42,7 @@ public class ContainerDimensionalBridgeStabilizer extends BaseContainer
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setInteger("energy", currentPower);
                 tag.setInteger("max", currentMaxPower);
-                EnhancedPortals.packetPipeline.sendTo(new PacketGuiData(tag), (EntityPlayerMP) icrafting);
+                mercuryrifts.packetPipeline.sendTo(new PacketGuiData(tag), (EntityPlayerMP) icrafting);
             }
 
             if (lastPortals != currentPortals)

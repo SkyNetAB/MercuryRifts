@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.client.gui.GuiTextureParticle;
-import enhancedportals.network.ClientProxy;
-import enhancedportals.network.ClientProxy.ParticleSet;
+import mercuryrifts.client.gui.GuiTextureParticle;
+import mercuryrifts.network.ClientProxy;
+import mercuryrifts.network.ClientProxy.ParticleSet;
 
 public class ElementScrollParticles extends BaseElement
 {

@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,19 +7,19 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.portal.GlyphIdentifier;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.portal.GlyphIdentifier;
 
 public class ElementGlyphSelector extends BaseElement
 {
-    public static final ResourceLocation glyphs = new ResourceLocation("enhancedportals", "textures/gui/glyphs.png");
+    public static final ResourceLocation glyphs = new ResourceLocation("mercuryrifts", "textures/gui/glyphs.png");
     ArrayList<Integer> selectedGlyphs = new ArrayList<Integer>();
     int[] glyphCount = new int[27];
 
     public ElementGlyphSelector(BaseGui gui, int x, int y)
     {
         super(gui, x, y, 162, 54);
-        texture = new ResourceLocation("enhancedportals", "textures/gui/player_inventory.png");
+        texture = new ResourceLocation("mercuryrifts", "textures/gui/player_inventory.png");
     }
 
     @Override

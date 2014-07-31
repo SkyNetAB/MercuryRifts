@@ -1,10 +1,10 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.client.gui.GuiProgrammableInterface;
-import enhancedportals.tileentity.TileProgrammableInterface;
+import mercuryrifts.client.gui.GuiProgrammableInterface;
+import mercuryrifts.tileentity.TileProgrammableInterface;
 
 public class ContainerProgrammableInterfaceErrorLog extends BaseContainer
 {

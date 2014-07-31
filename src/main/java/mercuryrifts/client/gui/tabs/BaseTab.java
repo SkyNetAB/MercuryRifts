@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.tabs;
+package mercuryrifts.client.gui.tabs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
 
 public abstract class BaseTab
 {
@@ -34,8 +34,8 @@ public abstract class BaseTab
     public int minHeight = 22;
     public int maxHeight = 22;
     public int currentHeight = minHeight;
-    public static final ResourceLocation DEFAULT_TEXTURE_LEFT = new ResourceLocation("enhancedportals", "textures/gui/tab_left.png");
-    public static final ResourceLocation DEFAULT_TEXTURE_RIGHT = new ResourceLocation("enhancedportals", "textures/gui/tab_right.png");
+    public static final ResourceLocation DEFAULT_TEXTURE_LEFT = new ResourceLocation("mercuryrifts", "textures/gui/tab_left.png");
+    public static final ResourceLocation DEFAULT_TEXTURE_RIGHT = new ResourceLocation("mercuryrifts", "textures/gui/tab_right.png");
     public int titleColour = 0xFFFFFF;
     public IIcon icon;
     public ItemStack stack;
@@ -116,7 +116,7 @@ public abstract class BaseTab
         {
             int offset = icon != null || stack != null ? 22 : 4;
             int offsetX = side == 0 ? offset - currentWidth + 2 : offset;
-            parent.getFontRenderer().drawStringWithShadow(EnhancedPortals.localize(name), posX + offsetX, posY + 7, titleColour);
+            parent.getFontRenderer().drawStringWithShadow(mercuryrifts.localize(name), posX + offsetX, posY + 7, titleColour);
         }
         
         if (isFullyOpened())
@@ -359,7 +359,7 @@ public abstract class BaseTab
     {
         if (isFullyClosed())
         {
-            list.add(EnhancedPortals.localize(name));
+            list.add(mercuryrifts.localize(name));
         }
     }
 }

@@ -1,9 +1,9 @@
-package enhancedportals.client.gui.tabs;
+package mercuryrifts.client.gui.tabs;
 
 import net.minecraft.client.gui.GuiButton;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.button.GuiRGBSlider;
-import enhancedportals.item.ItemNanobrush;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.button.GuiRGBSlider;
+import mercuryrifts.item.ItemNanobrush;
 
 public class TabColour extends BaseTab
 {

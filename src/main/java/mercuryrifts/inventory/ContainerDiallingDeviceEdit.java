@@ -1,14 +1,14 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.portal.GlyphElement;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalTextureManager;
-import enhancedportals.tileentity.TileDiallingDevice;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.portal.GlyphElement;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalTextureManager;
+import mercuryrifts.tileentity.TileDiallingDevice;
 
 public class ContainerDiallingDeviceEdit extends ContainerDiallingDeviceSave
 {
@@ -25,7 +25,7 @@ public class ContainerDiallingDeviceEdit extends ContainerDiallingDeviceSave
             PortalTextureManager ptm = new PortalTextureManager();
             ptm.readFromNBT(tag, "texture");
             dial.glyphList.set(tag.getInteger("id"), new GlyphElement(tag.getString("name"), new GlyphIdentifier(tag.getString("uid")), ptm));
-            player.openGui(EnhancedPortals.instance, GuiHandler.DIALLING_DEVICE_A, dial.getWorldObj(), dial.xCoord, dial.yCoord, dial.zCoord);
+            player.openGui(mercuryrifts.instance, GuiHandler.DIALLING_DEVICE_A, dial.getWorldObj(), dial.xCoord, dial.yCoord, dial.zCoord);
         }
     }
 }

@@ -1,14 +1,14 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiNetworkInterfaceGlyphs;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.tileentity.TileController;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiNetworkInterfaceGlyphs;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.tileentity.TileController;
 
 public class ContainerNetworkInterfaceGlyphs extends BaseContainer
 {
@@ -27,7 +27,7 @@ public class ContainerNetworkInterfaceGlyphs extends BaseContainer
         if (tag.hasKey("nid"))
         {
             controller.setIdentifierNetwork(new GlyphIdentifier(tag.getString("nid")));
-            player.openGui(EnhancedPortals.instance, GuiHandler.NETWORK_INTERFACE_A, controller.getWorldObj(), controller.xCoord, controller.yCoord, controller.zCoord);
+            player.openGui(mercuryrifts.instance, GuiHandler.NETWORK_INTERFACE_A, controller.getWorldObj(), controller.xCoord, controller.yCoord, controller.zCoord);
         }
     }
 }

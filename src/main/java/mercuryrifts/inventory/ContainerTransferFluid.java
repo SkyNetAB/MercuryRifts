@@ -1,13 +1,13 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiTransferFluid;
-import enhancedportals.tileentity.TileTransferFluid;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiTransferFluid;
+import mercuryrifts.tileentity.TileTransferFluid;
 
 public class ContainerTransferFluid extends BaseContainer
 {

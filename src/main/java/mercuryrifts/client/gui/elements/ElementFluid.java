@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import net.minecraftforge.fluids.FluidTank;
 
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.client.gui.BaseGui;
+import mercuryrifts.client.gui.BaseGui;
 
 public class ElementFluid extends BaseElement
 {
@@ -21,7 +21,7 @@ public class ElementFluid extends BaseElement
     {
         super(gui, x, y, 18, 62);
         t = tank;
-        texture = new ResourceLocation("enhancedportals", "textures/gui/elements.png");
+        texture = new ResourceLocation("mercuryrifts", "textures/gui/elements.png");
     }
 
     @Override

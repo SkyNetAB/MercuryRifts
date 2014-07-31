@@ -1,10 +1,10 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.tileentity.TileDiallingDevice;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.tileentity.TileDiallingDevice;
 
 public class ContainerDiallingDeviceManual extends BaseContainer
 {

@@ -1,8 +1,8 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
-import enhancedportals.client.gui.BaseGui;
+import mercuryrifts.client.gui.BaseGui;
 
 public class ElementSlider extends BaseElement
 {

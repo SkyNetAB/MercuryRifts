@@ -1,12 +1,12 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.common.IFakeSlotHandler;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.common.IFakeSlotHandler;
 
 public class ElementFakeItemSlot extends BaseElement
 {

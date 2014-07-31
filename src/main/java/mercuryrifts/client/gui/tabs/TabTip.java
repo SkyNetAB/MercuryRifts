@@ -1,11 +1,11 @@
-package enhancedportals.client.gui.tabs;
+package mercuryrifts.client.gui.tabs;
 
 import java.util.List;
 
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
 
 public class TabTip extends BaseTab
 {
@@ -15,7 +15,7 @@ public class TabTip extends BaseTab
     {
         super(gui, 0);
         name = "tab." + n;
-        tip = EnhancedPortals.localize("tab." + n + ".info").replace("<NL>", "\n").replaceAll("<([^<]*)>", "\u00A7$1");
+        tip = mercuryrifts.localize("tab." + n + ".info").replace("<NL>", "\n").replaceAll("<([^<]*)>", "\u00A7$1");
         List l = gui.getFontRenderer().listFormattedStringToWidth(tip, maxWidth - 14);
         maxHeight = l.size() * gui.getFontRenderer().FONT_HEIGHT + 25;
         backgroundColor = 0x33AA00;

@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.client.gui.BaseGui;
+import mercuryrifts.client.gui.BaseGui;
 
 public class ElementGlyphViewer extends BaseElement
 {
@@ -16,7 +16,7 @@ public class ElementGlyphViewer extends BaseElement
     {
         super(gui, x, y, 162, 18);
         selector = s;
-        texture = new ResourceLocation("enhancedportals", "textures/gui/player_inventory.png");
+        texture = new ResourceLocation("mercuryrifts", "textures/gui/player_inventory.png");
     }
 
     @Override

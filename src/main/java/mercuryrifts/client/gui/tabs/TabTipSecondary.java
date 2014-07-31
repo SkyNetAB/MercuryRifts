@@ -1,6 +1,6 @@
-package enhancedportals.client.gui.tabs;
+package mercuryrifts.client.gui.tabs;
 
-import enhancedportals.client.gui.BaseGui;
+import mercuryrifts.client.gui.BaseGui;
 
 public class TabTipSecondary extends TabTip
 {

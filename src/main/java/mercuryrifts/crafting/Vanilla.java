@@ -1,4 +1,4 @@
-package enhancedportals.crafting;
+package mercuryrifts.crafting;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -6,19 +6,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import cpw.mods.fml.common.registry.GameRegistry;
-import enhancedportals.block.BlockDecorBorderedQuartz;
-import enhancedportals.block.BlockDecorEnderInfusedMetal;
-import enhancedportals.block.BlockFrame;
-import enhancedportals.block.BlockStabilizer;
-import enhancedportals.item.ItemBlankPortalModule;
-import enhancedportals.item.ItemBlankUpgrade;
-import enhancedportals.item.ItemGlasses;
-import enhancedportals.item.ItemLocationCard;
-import enhancedportals.item.ItemManual;
-import enhancedportals.item.ItemNanobrush;
-import enhancedportals.item.ItemPortalModule;
-import enhancedportals.item.ItemUpgrade;
-import enhancedportals.item.ItemWrench;
+import mercuryrifts.block.BlockDecorBorderedQuartz;
+import mercuryrifts.block.BlockDecorEnderInfusedMetal;
+import mercuryrifts.block.BlockFrame;
+import mercuryrifts.block.BlockStabilizer;
+import mercuryrifts.item.ItemBlankPortalModule;
+import mercuryrifts.item.ItemBlankUpgrade;
+import mercuryrifts.item.ItemGlasses;
+import mercuryrifts.item.ItemLocationCard;
+import mercuryrifts.item.ItemManual;
+import mercuryrifts.item.ItemNanobrush;
+import mercuryrifts.item.ItemPortalModule;
+import mercuryrifts.item.ItemUpgrade;
+import mercuryrifts.item.ItemWrench;
 
 public class Vanilla
 {

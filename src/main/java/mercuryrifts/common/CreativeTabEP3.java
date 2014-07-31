@@ -1,16 +1,16 @@
-package enhancedportals.common;
+package mercuryrifts.common;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.block.BlockPortal;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.block.BlockPortal;
 
-public class CreativeTabEP3 extends CreativeTabs
+public class CreativeTabmr extends CreativeTabs
 {
-    public CreativeTabEP3()
+    public CreativeTabmr()
     {
-        super(EnhancedPortals.ID);
+        super(mercuryrifts.ID);
     }
 
     @Override

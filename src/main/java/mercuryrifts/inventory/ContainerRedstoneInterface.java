@@ -1,15 +1,15 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiRedstoneInterface;
-import enhancedportals.network.packet.PacketGui;
-import enhancedportals.tileentity.TileRedstoneInterface;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiRedstoneInterface;
+import mercuryrifts.network.packet.PacketGui;
+import mercuryrifts.tileentity.TileRedstoneInterface;
 
 public class ContainerRedstoneInterface extends BaseContainer
 {
@@ -35,7 +35,7 @@ public class ContainerRedstoneInterface extends BaseContainer
 
             if (firstState != fs || secondState != ss)
             {
-                EnhancedPortals.packetPipeline.sendTo(new PacketGui(ri), (EntityPlayerMP) icrafting);
+                mercuryrifts.packetPipeline.sendTo(new PacketGui(ri), (EntityPlayerMP) icrafting);
             }
         }
 

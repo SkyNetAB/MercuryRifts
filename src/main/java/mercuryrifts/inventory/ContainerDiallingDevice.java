@@ -1,4 +1,4 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import java.util.ArrayList;
 
@@ -7,12 +7,12 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.network.packet.PacketGui;
-import enhancedportals.network.packet.PacketTextureData;
-import enhancedportals.portal.GlyphElement;
-import enhancedportals.tileentity.TileDiallingDevice;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.network.packet.PacketGui;
+import mercuryrifts.network.packet.PacketTextureData;
+import mercuryrifts.portal.GlyphElement;
+import mercuryrifts.tileentity.TileDiallingDevice;
 
 public class ContainerDiallingDevice extends BaseContainer
 {
@@ -79,8 +79,8 @@ public class ContainerDiallingDevice extends BaseContainer
             if (dial.glyphList.size() > id)
             {
                 GlyphElement e = dial.glyphList.get(id);
-                player.openGui(EnhancedPortals.instance, GuiHandler.DIALLING_DEVICE_D, dial.getWorldObj(), dial.xCoord, dial.yCoord, dial.zCoord);
-                EnhancedPortals.packetPipeline.sendTo(new PacketTextureData(e.name, e.identifier.getGlyphString(), e.texture), (EntityPlayerMP) player);
+                player.openGui(mercuryrifts.instance, GuiHandler.DIALLING_DEVICE_D, dial.getWorldObj(), dial.xCoord, dial.yCoord, dial.zCoord);
+                mercuryrifts.packetPipeline.sendTo(new PacketTextureData(e.name, e.identifier.getGlyphString(), e.texture), (EntityPlayerMP) player);
             }
         }
         else if (tag.hasKey("delete"))
@@ -92,7 +92,7 @@ public class ContainerDiallingDevice extends BaseContainer
                 dial.glyphList.remove(id);
             }
 
-            EnhancedPortals.packetPipeline.sendTo(new PacketGui(dial), (EntityPlayerMP) player);
+            mercuryrifts.packetPipeline.sendTo(new PacketGui(dial), (EntityPlayerMP) player);
         }
     }
 
@@ -101,7 +101,7 @@ public class ContainerDiallingDevice extends BaseContainer
         for (int i = 0; i < crafters.size(); i++)
         {
             ICrafting icrafting = (ICrafting) crafters.get(i);
-            EnhancedPortals.packetPipeline.sendTo(new PacketGui(dial), (EntityPlayerMP) icrafting);
+            mercuryrifts.packetPipeline.sendTo(new PacketGui(dial), (EntityPlayerMP) icrafting);
         }
     }
 }

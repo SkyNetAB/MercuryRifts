@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.lwjgl.opengl.GL11;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import enhancedportals.client.gui.GuiManual;
-import enhancedportals.network.ClientProxy;
+import mercuryrifts.client.gui.GuiManual;
+import mercuryrifts.network.ClientProxy;
 
 public class ElementManualCraftingGrid extends BaseElement
 {
@@ -17,7 +17,7 @@ public class ElementManualCraftingGrid extends BaseElement
     public ElementManualCraftingGrid(GuiManual gui, int x, int y, ItemStack[] i)
     {
         super(gui, x, y, 66, i == null ? 66 : i.length == 10 ? 99 : 66);
-        texture = new ResourceLocation("enhancedportals", "textures/gui/crafting.png");
+        texture = new ResourceLocation("mercuryrifts", "textures/gui/crafting.png");
         items = i;
     }
 

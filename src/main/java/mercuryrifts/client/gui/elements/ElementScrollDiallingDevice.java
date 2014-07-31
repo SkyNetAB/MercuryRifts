@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.GuiDiallingDevice;
-import enhancedportals.portal.GlyphElement;
-import enhancedportals.tileentity.TileDiallingDevice;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.GuiDiallingDevice;
+import mercuryrifts.portal.GlyphElement;
+import mercuryrifts.tileentity.TileDiallingDevice;
 
 public class ElementScrollDiallingDevice extends BaseElement
 {
@@ -47,12 +47,12 @@ public class ElementScrollDiallingDevice extends BaseElement
             {
                 if (parent.isShiftKeyDown())
                 {
-                    list.add(EnhancedPortals.localize("gui.delete"));
+                    list.add(mercuryrifts.localize("gui.delete"));
                     break;
                 }
                 else
                 {
-                    list.add(EnhancedPortals.localize("gui.edit"));
+                    list.add(mercuryrifts.localize("gui.edit"));
                     break;
                 }
             }

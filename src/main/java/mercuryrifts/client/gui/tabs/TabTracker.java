@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.tabs;
+package mercuryrifts.client.gui.tabs;
 
 public class TabTracker
 {

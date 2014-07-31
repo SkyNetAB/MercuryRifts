@@ -1,4 +1,4 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-import enhancedportals.client.gui.GuiTextureFrame;
-import enhancedportals.network.ClientProxy;
+import mercuryrifts.client.gui.GuiTextureFrame;
+import mercuryrifts.network.ClientProxy;
 
 public class ElementScrollFrameIcons extends BaseElement
 {

@@ -1,16 +1,16 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiPortalController;
-import enhancedportals.network.packet.PacketGuiData;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.tileentity.TileController;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiPortalController;
+import mercuryrifts.network.packet.PacketGuiData;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.tileentity.TileController;
 
 public class ContainerPortalController extends BaseContainer
 {
@@ -46,7 +46,7 @@ public class ContainerPortalController extends BaseContainer
             {
                 NBTTagCompound t = new NBTTagCompound();
                 t.setString("uid", glyphs);
-                EnhancedPortals.packetPipeline.sendTo(new PacketGuiData(t), (EntityPlayerMP) icrafting);
+                mercuryrifts.packetPipeline.sendTo(new PacketGuiData(t), (EntityPlayerMP) icrafting);
             }
         }
 

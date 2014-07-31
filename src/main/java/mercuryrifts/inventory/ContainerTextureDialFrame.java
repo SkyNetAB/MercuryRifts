@@ -1,7 +1,7 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.InventoryPlayer;
-import enhancedportals.tileentity.TileDiallingDevice;
+import mercuryrifts.tileentity.TileDiallingDevice;
 
 public class ContainerTextureDialFrame extends ContainerTextureFrame
 {

@@ -1,4 +1,4 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -6,14 +6,14 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import cpw.mods.fml.common.FMLCommonHandler;
-import enhancedportals.EnhancedPortals;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiPortalControllerGlyphs;
-import enhancedportals.network.GuiHandler;
-import enhancedportals.network.packet.PacketGuiData;
-import enhancedportals.portal.GlyphIdentifier;
-import enhancedportals.portal.PortalException;
-import enhancedportals.tileentity.TileController;
+import mercuryrifts.mercuryrifts;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiPortalControllerGlyphs;
+import mercuryrifts.network.GuiHandler;
+import mercuryrifts.network.packet.PacketGuiData;
+import mercuryrifts.portal.GlyphIdentifier;
+import mercuryrifts.portal.PortalException;
+import mercuryrifts.tileentity.TileController;
 
 public class ContainerPortalControllerGlyphs extends BaseContainer
 {
@@ -34,13 +34,13 @@ public class ContainerPortalControllerGlyphs extends BaseContainer
             try
             {
                 controller.setIdentifierUnique(new GlyphIdentifier(tag.getString("uid")));
-                player.openGui(EnhancedPortals.instance, GuiHandler.PORTAL_CONTROLLER_A, controller.getWorldObj(), controller.xCoord, controller.yCoord, controller.zCoord);
+                player.openGui(mercuryrifts.instance, GuiHandler.PORTAL_CONTROLLER_A, controller.getWorldObj(), controller.xCoord, controller.yCoord, controller.zCoord);
             }
             catch (PortalException e)
             {
                 NBTTagCompound errorTag = new NBTTagCompound();
                 errorTag.setInteger("error", 0);
-                EnhancedPortals.packetPipeline.sendTo(new PacketGuiData(errorTag), (EntityPlayerMP) player);
+                mercuryrifts.packetPipeline.sendTo(new PacketGuiData(errorTag), (EntityPlayerMP) player);
             }
         }
         else if (tag.hasKey("error") && FMLCommonHandler.instance().getEffectiveSide().isClient())

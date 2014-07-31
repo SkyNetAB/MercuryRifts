@@ -1,10 +1,10 @@
-package enhancedportals.client.gui.elements;
+package mercuryrifts.client.gui.elements;
 
 import java.util.List;
 
 import net.minecraft.util.ResourceLocation;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.portal.GlyphIdentifier;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.portal.GlyphIdentifier;
 
 public class ElementGlyphDisplay extends BaseElement
 {
@@ -30,7 +30,7 @@ public class ElementGlyphDisplay extends BaseElement
     @Override
     protected void drawContent()
     {
-        parent.getMinecraft().renderEngine.bindTexture(new ResourceLocation("enhancedportals", "textures/gui/player_inventory.png"));
+        parent.getMinecraft().renderEngine.bindTexture(new ResourceLocation("mercuryrifts", "textures/gui/player_inventory.png"));
         drawTexturedModalRect(posX, posY, 7, 7, sizeX, sizeY);
         
         parent.getMinecraft().renderEngine.bindTexture(ElementGlyphSelector.glyphs);

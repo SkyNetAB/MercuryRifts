@@ -1,12 +1,12 @@
-package enhancedportals.inventory;
+package mercuryrifts.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import enhancedportals.client.gui.BaseGui;
-import enhancedportals.client.gui.GuiTextureFrame;
-import enhancedportals.tileentity.TileController;
+import mercuryrifts.client.gui.BaseGui;
+import mercuryrifts.client.gui.GuiTextureFrame;
+import mercuryrifts.tileentity.TileController;
 
 public class ContainerTextureFrame extends BaseContainer
 {
