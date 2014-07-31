@@ -1,14 +1,14 @@
 [{
   "modid": "${mod_id}",
-  "name": "EnhancedPortals",
+  "name": "MercuryRifts",
   "version": "${mod_version}",
   "mcversion": "${mc_version}",
-  "url": "http://shadeddimensions.co.uk",
-  "credits": "",
-  "authorList": [ "Alz454" ],
-  "description": "An advanced technological portal teleportation system",
+  "url": "http://skynet.atomicbase.com",
+  "credits": "Alz454, the original mod of Enhanced Portals, which is what almost all of this mod is based on.",
+  "authorList": [ "KzariusRex","SexyDexyDoo","SyiSeiko" ],
+  "description": "You've come across a dimensional meat grinder, step into the rift.",
   "logoFile": "",
-  "updateUrl": "http://shadeddimensions.co.uk",
+  "updateUrl": "http://skynet.atomicbase.com",
   "parent": "",
   "screenshots": [ ]
 }]
